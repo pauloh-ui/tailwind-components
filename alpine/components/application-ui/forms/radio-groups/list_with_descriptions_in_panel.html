@@ -1,0 +1,42 @@
+<!--
+  This example requires Tailwind CSS v2.0+
+
+  The alpine.js code is *NOT* production ready and is included to preview
+  possible interactivity
+-->
+<div class="flex justify-center bg-gray-100 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="mx-auto w-full max-w-3xl">
+      
+  <fieldset x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" x-init="init()">
+    <legend class="sr-only"> Privacy setting </legend>
+    <div class="-space-y-px rounded-md bg-white">
+      
+        <label x-radio-group-option="" class="rounded-tl-md rounded-tr-md  relative flex cursor-pointer border p-4 focus:outline-none" x-description="Checked: &quot;z-10 border-indigo-200 bg-indigo-50&quot;, Not Checked: &quot;border-gray-200&quot;" :class="{ 'z-10 border-indigo-200 bg-indigo-50': (value === 'Public access'), 'border-gray-200': !(value === 'Public access') }">
+          <input type="radio" x-model="value" name="privacy-setting" value="Public access" class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer text-indigo-600 border-gray-300 focus:ring-indigo-600" aria-labelledby="privacy-setting-0-label" aria-describedby="privacy-setting-0-description">
+          <span class="ml-3 flex flex-col">
+            <span id="privacy-setting-0-label" class="block text-sm font-medium" x-description="Checked: &quot;text-indigo-900&quot;, Not Checked: &quot;text-gray-900&quot;" :class="{ 'text-indigo-900': (value === 'Public access'), 'text-gray-900': !(value === 'Public access') }">Public access</span>
+            <span id="privacy-setting-0-description" class="block text-sm" x-description="Checked: &quot;text-indigo-700&quot;, Not Checked: &quot;text-gray-500&quot;" :class="{ 'text-indigo-700': (value === 'Public access'), 'text-gray-500': !(value === 'Public access') }">This project would be available to anyone who has the link</span>
+          </span>
+        </label>
+      
+        <label x-radio-group-option="" class="  relative flex cursor-pointer border p-4 focus:outline-none" x-description="Checked: &quot;z-10 border-indigo-200 bg-indigo-50&quot;, Not Checked: &quot;border-gray-200&quot;" :class="{ 'z-10 border-indigo-200 bg-indigo-50': (value === 'Private to Project Members'), 'border-gray-200': !(value === 'Private to Project Members') }">
+          <input type="radio" x-model="value" name="privacy-setting" value="Private to Project Members" class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer text-indigo-600 border-gray-300 focus:ring-indigo-600" aria-labelledby="privacy-setting-1-label" aria-describedby="privacy-setting-1-description">
+          <span class="ml-3 flex flex-col">
+            <span id="privacy-setting-1-label" class="block text-sm font-medium" x-description="Checked: &quot;text-indigo-900&quot;, Not Checked: &quot;text-gray-900&quot;" :class="{ 'text-indigo-900': (value === 'Private to Project Members'), 'text-gray-900': !(value === 'Private to Project Members') }">Private to Project Members</span>
+            <span id="privacy-setting-1-description" class="block text-sm" x-description="Checked: &quot;text-indigo-700&quot;, Not Checked: &quot;text-gray-500&quot;" :class="{ 'text-indigo-700': (value === 'Private to Project Members'), 'text-gray-500': !(value === 'Private to Project Members') }">Only members of this project would be able to access</span>
+          </span>
+        </label>
+      
+        <label x-radio-group-option="" class=" rounded-bl-md rounded-br-md relative flex cursor-pointer border p-4 focus:outline-none" x-description="Checked: &quot;z-10 border-indigo-200 bg-indigo-50&quot;, Not Checked: &quot;border-gray-200&quot;" :class="{ 'z-10 border-indigo-200 bg-indigo-50': (value === 'Private to you'), 'border-gray-200': !(value === 'Private to you') }">
+          <input type="radio" x-model="value" name="privacy-setting" value="Private to you" class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer text-indigo-600 border-gray-300 focus:ring-indigo-600" aria-labelledby="privacy-setting-2-label" aria-describedby="privacy-setting-2-description">
+          <span class="ml-3 flex flex-col">
+            <span id="privacy-setting-2-label" class="block text-sm font-medium" x-description="Checked: &quot;text-indigo-900&quot;, Not Checked: &quot;text-gray-900&quot;" :class="{ 'text-indigo-900': (value === 'Private to you'), 'text-gray-900': !(value === 'Private to you') }">Private to you</span>
+            <span id="privacy-setting-2-description" class="block text-sm" x-description="Checked: &quot;text-indigo-700&quot;, Not Checked: &quot;text-gray-500&quot;" :class="{ 'text-indigo-700': (value === 'Private to you'), 'text-gray-500': !(value === 'Private to you') }">You are the only one able to access this project</span>
+          </span>
+        </label>
+      
+    </div>
+  </fieldset>
+
+    </div>
+  </div>
